@@ -26,4 +26,4 @@ then turn off simultaneously to simulate a race start.
 - Randomised timing logic
 
 ## Author
-Jason — Mechanical Engineering Student, OVGU Magdeburg
+Jason: Mechanical Engineering Student, OVGU Magdeburg
