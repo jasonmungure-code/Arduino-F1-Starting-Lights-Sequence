@@ -7,17 +7,21 @@ then turn off simultaneously to simulate a race start.
 
 ## Components Used
 - Arduino UNO R3
-- 8x Red LEDs
-- 8x 220Ω resistors
+- 4 x Red LEDs
+- 4 x 220Ω resistors
+- Active Buzzer module
+- Push button
+- 1 x 10kΩ resistor
 - Breadboard
 - Jumper wires
 
 ## How It Works
-- Each pair of LEDs is connected to a separate digital output pin (8, 10, 11, 12)
-- LEDs illuminate sequentially with a 1 second delay between each
-- A randomised delay (1000–3000ms) simulates the unpredictable lights-out moment
-- All LEDs turn off simultaneously to signal the race start
-- Sequence loops continuously
+ Press the button to trigger the sequence
+- Each pair of LEDs illuminates sequentially with a beep and 1 second delay
+- Randomised delay (1000–2000ms) simulates unpredictable lights-out moment
+- All LEDs turn off simultaneously to signal race start
+- Sequence resets and waits for button press again
+
 
 ## Skills Demonstrated
 - Arduino IDE programming
