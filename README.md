@@ -28,6 +28,7 @@ then turn off simultaneously to simulate a race start.
 - Circuit design and breadboard wiring
 - Digital output control
 - Randomised timing logic
+- Multi-component integration
 
 ## Author
 Jason: Mechanical Engineering Student, OVGU Magdeburg
