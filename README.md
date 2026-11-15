@@ -34,7 +34,7 @@ The random hold uses `random(1000, 2000)`.
 
 ## Development process
 
-![Initial Tinkercad run](images/tinkercad.png)
+![Initial Tinkercad run](tinkercad.png)
 *Initial run in Tinkercad: the first version of the circuit (3 LEDs, as the fourth didn't fit on the virtual breadboard) and the code. It shows how the project built up before the physical build.*
 
 - Built up in three steps: button input → traffic light sequencing → F1 lights.
