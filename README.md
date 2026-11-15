@@ -6,7 +6,7 @@ A small-scale replica of the Formula 1 start sequence on an Arduino UNO. Press t
 
 ## How it works
 1. **Button press** (pin 2) starts the sequence.
-2. **Four light stages** switch on one after another, 1 s apart, each with a 1 kHz beep.
+2. **Four red LEDs** switch on one after another, 1 s apart, each with a 1 kHz beep.
 3. **Random hold**: all lights stay on for 1.0–2.0 s. As in a real F1 start, drivers can't predict the exact moment.
 4. **Lights out**: all stages switch off at the same time.
 5. After a short pause the system waits for the next button press.
@@ -14,6 +14,10 @@ A small-scale replica of the Formula 1 start sequence on an Arduino UNO. Press t
 The randomness comes from `random()`, seeded with `randomSeed(analogRead(A0))`. Without a seed, the Arduino produces the same "random" sequence after every reset. Reading an unconnected analog pin gives electrical noise, so each power-up gets a different seed.
 
 ## Wiring
+
+![Tinkercad simulation](images/tinkercad.png)
+*Tinkercad simulation of the circuit (3 LEDs for space; the physical build has 4).*
+
 
 | Component | Arduino pin | Notes |
 |---|---|---|
@@ -27,14 +31,14 @@ The randomness comes from `random()`, seeded with `randomSeed(analogRead(A0))`. 
 
 ## Components
 - Arduino UNO R3
-- Red LEDs and 220 Ω resistors
+- 4 red LEDs and 4 × 220 Ω resistors
 - Buzzer
 - Push button and 10 kΩ resistor
 - Breadboard and jumper wires
 
 ## Development process
 - Built up in three steps: button input → traffic light sequencing → F1 lights.
-- Simulated in **Tinkercad** before wiring the real circuit.
+- Simulated in **Tinkercad** before wiring the real circuit (the simulation uses 3 LEDs because the fourth didn't fit on the virtual breadboard; the physical build has all 4).
 - Code refactored to use a pin array and loops instead of repeated `digitalWrite` blocks, so the number of stages or the timing can be changed in one place.
 
 ## Skills demonstrated
